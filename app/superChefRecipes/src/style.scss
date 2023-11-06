@@ -1,0 +1,17 @@
+@import './vendors/resets.scss';
+@import './variables.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  #root {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    width: 100%
+  }
+};
