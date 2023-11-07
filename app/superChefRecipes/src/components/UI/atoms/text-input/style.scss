@@ -1,0 +1,10 @@
+@import "../../../../variables.scss";
+
+.text-input {
+  .text {
+    font-size: 1.2rem;
+    border: 1px solid $black;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+}

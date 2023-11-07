@@ -1,0 +1,14 @@
+.recipe-image-fav-time-count {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: inherit;
+}
+
+.fav-time-count-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  width: inherit;
+  justify-content: space-around;
+}
