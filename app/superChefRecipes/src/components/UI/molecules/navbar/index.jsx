@@ -6,6 +6,7 @@ export default function Navbar() {
   return (
     <section className="navbar">
       <img src={logo} alt="Site Logo" className="siteLogo" />
+      <span className="text">Taste the World, One Recipe at a Time!</span>
       <ListIcon className="menuIcon" fontSize="large" color="primary"></ListIcon>
     </section>
   );

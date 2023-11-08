@@ -7,14 +7,24 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-}
 
-.siteLogo {
-  width: 20%;
-  height: auto;
-  margin: 3%;
-}
+  .siteLogo {
+    width: 20%;
+    height: auto;
+    margin: 3%;
+  }
 
-.menuIcon {
-  margin: 3%;
+  .menuIcon {
+    margin: 3%;
+  }
+
+  .text {
+     display: flex;
+     color: $white;
+     font-family: $title-font;
+     text-align: center;
+     background-image: linear-gradient(to left, $pastel-pink, $pastel-blue, $pastel-green, $pastel-yellow);
+     background-clip: text;
+     color: transparent;
+  }
 }

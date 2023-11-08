@@ -1,6 +1,22 @@
 @import './vendors/resets.scss';
 @import './variables.scss';
 
+@font-face {
+  font-family: 'Agbalumo';
+  src: url('./fonts/Agbalumo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -14,4 +30,6 @@ body {
     align-items: inherit;
     width: 100%
   }
-};
+}
+
+;
