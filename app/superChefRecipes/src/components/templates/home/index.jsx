@@ -3,6 +3,7 @@ import SearchHeader from "../../UI/organisms/search-header/index";
 import RecipeCardFavoriteAndTimeCount from "../../UI/organisms/recipe-card-fav-time";
 import RecipeCardPopular from "../../UI/organisms/recipe-card-popular";
 import SearchByCategories from "../../UI/organisms/search-category";
+import Footer from "../../UI/organisms/footer";
 
 export default function HomeTemplate() {
   return (
@@ -19,6 +20,9 @@ export default function HomeTemplate() {
       <div className="search-categories-wrapper">
         <span>Search By Categories</span>
         <SearchByCategories></SearchByCategories>
+      </div>
+      <div className="footer-wrapper">
+        <Footer></Footer>
       </div>
     </section>
   );
