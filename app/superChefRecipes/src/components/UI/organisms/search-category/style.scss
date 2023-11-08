@@ -1,0 +1,9 @@
+.search-categories {
+  display: flex;
+  flex-wrap: wrap;
+
+  .search-type-icon {
+    display: flex;
+    flex: 33%;
+  }
+}
