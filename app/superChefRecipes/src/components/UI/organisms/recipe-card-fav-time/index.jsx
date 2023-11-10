@@ -5,7 +5,7 @@ export default function RecipeCardFavoriteAndTimeCount () {
   return (
     <section className="recipe-card-fav-time">
         <RecipeImageWithFavoritesAndTimeCount></RecipeImageWithFavoritesAndTimeCount>
-        <span>Tomato Pasta</span>
+        <span className="card-title">Tomato Pasta</span>
     </section>
   );
 }

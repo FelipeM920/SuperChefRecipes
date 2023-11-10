@@ -3,8 +3,17 @@ import ReactDOM from "react-dom/client";
 import Home from "./routes/home";
 import Contact from "./routes/contact";
 import ErrorPage from "./error-page";
-import './style.scss';
+import "./style.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#FFF'
+    }
+  },
+});
 
 const router = createBrowserRouter([
   {
@@ -20,6 +29,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );

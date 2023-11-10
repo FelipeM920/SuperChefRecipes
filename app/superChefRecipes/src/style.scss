@@ -18,18 +18,9 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  #root {
-    display: inherit;
-    flex-direction: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    width: 100%
-  }
+  background-color: $light-grey;
 }
 
-;
+:root {
+  --swiper-theme-color: #A0E7E5;
+}

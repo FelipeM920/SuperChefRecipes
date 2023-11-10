@@ -1,6 +1,18 @@
+@import "../../../variables.scss";
+
 .suggestions-slide {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  .title {
+    font-family: $title-font;
+    font-size: 1.3rem;
+  }
+
+  .seggestion-swiper {
+    margin-top: 0.7rem;
+
+    --swiper-pagination-bottom: 0;
+  }
 }
 
 .popular-slide {
@@ -14,5 +26,5 @@
 }
 
 .home-body {
-  
+  margin: 0 1rem;
 }

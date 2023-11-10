@@ -1,14 +1,17 @@
+@import "../../../../variables.scss";
+
 .recipe-image-fav-time-count {
   display: flex;
   flex-direction: column;
   position: relative;
   width: inherit;
-}
+  font-family: $default-font;
 
-.fav-time-count-wrapper {
-  display: flex;
-  position: absolute;
-  bottom: 10%;
-  width: inherit;
-  justify-content: space-around;
+  .fav-time-count-wrapper {
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    width: inherit;
+    justify-content: space-around;
+  }
 }

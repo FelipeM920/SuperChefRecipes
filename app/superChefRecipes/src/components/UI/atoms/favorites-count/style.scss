@@ -1,0 +1,10 @@
+@import "../../../../variables.scss";
+
+.favorites-count {
+  display: flex;
+  align-items: center;
+
+  span {
+    color: $white;
+  }
+}

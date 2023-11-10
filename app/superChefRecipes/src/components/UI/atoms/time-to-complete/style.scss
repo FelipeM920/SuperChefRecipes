@@ -1,0 +1,10 @@
+@import "../../../../variables.scss";
+
+.time-to-complete {
+  display: flex;
+  align-items: center;
+
+  span {
+    color: $white;
+  }
+}
