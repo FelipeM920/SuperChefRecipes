@@ -35,8 +35,33 @@ export default function HomeTemplate() {
           </Swiper>
         </div>
         <div className="popular-slide">
-          <span>Popular Recipes</span>
-          <RecipeCardPopular></RecipeCardPopular>
+          <span className="popular-title">Popular Recipes</span>
+          <Swiper
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            slidesPerView={2.3}
+            spaceBetween={5}
+            loop={true}
+          >
+            <SwiperSlide>
+              <RecipeCardPopular></RecipeCardPopular>
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecipeCardPopular></RecipeCardPopular>
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecipeCardPopular></RecipeCardPopular>
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecipeCardPopular></RecipeCardPopular>
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecipeCardPopular></RecipeCardPopular>
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecipeCardPopular></RecipeCardPopular>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className="search-categories-wrapper">
           <span>Search By Categories</span>

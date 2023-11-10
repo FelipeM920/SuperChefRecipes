@@ -1,13 +1,20 @@
+@import "../../../../variables.scss";
+
 .recipe-image-title {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: inherit;
+  height: inherit;
 
   .title {
     display: flex;
     position: absolute;
     top: 3%;
     width: inherit;
+    color: $white;
+    font-family: $default-font;
+    margin-top: 10%;
+    margin-left: 3%;
+    padding-right: 15%;
   }
 }

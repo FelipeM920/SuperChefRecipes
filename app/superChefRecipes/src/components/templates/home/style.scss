@@ -16,8 +16,18 @@
 }
 
 .popular-slide {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  .popular-title {
+    font-family: $title-font;
+    font-size: 1.3rem;
+  }
+
+  .recipe-card-popular {
+    width: 100%;
+    height: 14rem;
+    margin-bottom: 30%;
+  }
 }
 
 .search-categories-wrapper {
