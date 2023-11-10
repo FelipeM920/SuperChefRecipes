@@ -33,6 +33,11 @@
 .search-categories-wrapper {
   display: flex;
   flex-direction: column;
+
+  .title {
+    font-family: $title-font;
+    font-size: 1.3rem;
+  }
 }
 
 .home-body {

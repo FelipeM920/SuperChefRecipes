@@ -64,7 +64,7 @@ export default function HomeTemplate() {
           </Swiper>
         </div>
         <div className="search-categories-wrapper">
-          <span>Search By Categories</span>
+          <span className="title">Search By Categories</span>
           <SearchByCategories></SearchByCategories>
         </div>
       </div>
