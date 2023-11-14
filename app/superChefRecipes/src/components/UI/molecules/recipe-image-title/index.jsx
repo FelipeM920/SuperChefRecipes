@@ -1,12 +1,20 @@
 import "./style.scss";
 import ImageHolder from "../../atoms/image-holder";
+import PropTypes from "prop-types";
 
-export default function RecipeImageWithTitle() {
+RecipeImageWithTitle.propTypes = {
+  cardTitle: PropTypes.string.isRequired,
+  imageSource: PropTypes.string,
+};
+
+export default function RecipeImageWithTitle(props) {
+  const { cardTitle, imageSource } = props;
+
   return (
     <section className="recipe-image-title">
-      <ImageHolder></ImageHolder>
+      <ImageHolder imageSource={imageSource}></ImageHolder>
       <div className="title">
-        <span>Colored Macarons</span>
+        <span>{cardTitle}</span>
       </div>
     </section>
   );

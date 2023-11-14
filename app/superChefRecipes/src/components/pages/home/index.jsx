@@ -14,12 +14,13 @@ import "swiper/css/pagination";
 export default function Home() {
   axios.defaults.baseURL = "http://localhost:5000"; //just for local tests
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
+  const [popularRecipes, setPopularRecipes] = useState([]);
 
   useEffect(() => {
-    console.log("fetchcall");
     axios.get("/search").then((response) => {
       console.log(response);
       setFavoriteRecipes(response.data.slice(0, 3));
+      setPopularRecipes(response.data.slice(4, 9));
     });
   }, []);
 
@@ -31,6 +32,17 @@ export default function Home() {
           timeToComplete={value.recipe.totalTime}
           imageSource={value.recipe.image}
         ></RecipeCardFavoriteAndTimeCount>
+      </SwiperSlide>
+    );
+  }
+
+  function handlePopularRecipes(value) {
+    return (
+      <SwiperSlide key={value.recipe.label}>
+        <RecipeCardPopular
+          cardTitle={value.recipe.label}
+          imageSource={value.recipe.image}
+        ></RecipeCardPopular>
       </SwiperSlide>
     );
   }
@@ -61,24 +73,8 @@ export default function Home() {
             spaceBetween={5}
             loop={true}
           >
-            <SwiperSlide>
-              <RecipeCardPopular></RecipeCardPopular>
-            </SwiperSlide>
-            <SwiperSlide>
-              <RecipeCardPopular></RecipeCardPopular>
-            </SwiperSlide>
-            <SwiperSlide>
-              <RecipeCardPopular></RecipeCardPopular>
-            </SwiperSlide>
-            <SwiperSlide>
-              <RecipeCardPopular></RecipeCardPopular>
-            </SwiperSlide>
-            <SwiperSlide>
-              <RecipeCardPopular></RecipeCardPopular>
-            </SwiperSlide>
-            <SwiperSlide>
-              <RecipeCardPopular></RecipeCardPopular>
-            </SwiperSlide>
+            {popularRecipes.length > 0 &&
+              popularRecipes.map((value) => handlePopularRecipes(value))}
           </Swiper>
         </div>
         <div className="search-categories-wrapper">
