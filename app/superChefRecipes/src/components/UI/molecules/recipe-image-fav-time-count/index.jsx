@@ -2,14 +2,22 @@ import "./style.scss";
 import ImageHolder from "../../atoms/image-holder";
 import FavoritesCount from "../../atoms/favorites-count";
 import TimeToComplete from "../../atoms/time-to-complete";
+import PropTypes from "prop-types";
 
-export default function RecipeImageWithFavoritesAndTimeCount() {
+RecipeImageWithFavoritesAndTimeCount.propTypes = {
+  timeToComplete: PropTypes.number.isRequired,
+  imageSource: PropTypes.string,
+};
+
+export default function RecipeImageWithFavoritesAndTimeCount(props) {
+  const { timeToComplete, imageSource } = props;
+
   return (
     <section className="recipe-image-fav-time-count">
-      <ImageHolder></ImageHolder>
+      <ImageHolder imageSource={imageSource}></ImageHolder>
       <div className="fav-time-count-wrapper">
         <FavoritesCount></FavoritesCount>
-        <TimeToComplete></TimeToComplete>
+        <TimeToComplete timeToComplete={timeToComplete}></TimeToComplete>
       </div>
     </section>
   );

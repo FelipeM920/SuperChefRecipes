@@ -1,9 +1,21 @@
 import "./style.scss";
+import PropTypes from "prop-types";
 
-export default function ImageHolder() {
+ImageHolder.propTypes = {
+  imageSource: PropTypes.string,
+};
+
+export default function ImageHolder(props) {
+  const { imageSource } = props;
+
+  let safeImageSource = imageSource ?? "https://via.assets.so/game.png?id=3&q=95&w=500&h=200&fit=fill";
+
   return (
     <section className="image-holder">
-      <img src="https://via.assets.so/game.png?id=3&q=95&w=500&h=200&fit=fill" alt="image alt temp" />
+      <img
+        src={safeImageSource}
+        alt="image alt temp"
+      />
     </section>
   );
 }

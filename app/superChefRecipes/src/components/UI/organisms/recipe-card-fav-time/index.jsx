@@ -1,11 +1,23 @@
 import "./style.scss";
 import RecipeImageWithFavoritesAndTimeCount from "../../molecules/recipe-image-fav-time-count";
+import PropTypes from "prop-types";
 
-export default function RecipeCardFavoriteAndTimeCount () {
+RecipeCardFavoriteAndTimeCount.propTypes = {
+  cardTitle: PropTypes.string.isRequired,
+  timeToComplete: PropTypes.number.isRequired,
+  imageSource: PropTypes.string,
+};
+
+export default function RecipeCardFavoriteAndTimeCount(props) {
+  const { cardTitle, timeToComplete, imageSource } = props;
+
   return (
     <section className="recipe-card-fav-time">
-        <RecipeImageWithFavoritesAndTimeCount></RecipeImageWithFavoritesAndTimeCount>
-        <span className="card-title">Tomato Pasta</span>
+      <RecipeImageWithFavoritesAndTimeCount
+        timeToComplete={timeToComplete}
+        imageSource={imageSource}
+      ></RecipeImageWithFavoritesAndTimeCount>
+      <span className="card-title">{cardTitle}</span>
     </section>
   );
 }
