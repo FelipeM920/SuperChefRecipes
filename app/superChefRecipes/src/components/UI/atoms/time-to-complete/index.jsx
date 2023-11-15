@@ -1,6 +1,7 @@
 import "./style.scss";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 TimeToComplete.propTypes = {
   timeToComplete: PropTypes.number.isRequired,
@@ -11,7 +12,7 @@ export default function TimeToComplete(props) {
 
   return (
     <section className="time-to-complete">
-      <AccessTimeIcon color="primary"></AccessTimeIcon>
+      <FontAwesomeIcon icon={faClock} />
       <span>{timeToComplete} min</span>
     </section>
   );

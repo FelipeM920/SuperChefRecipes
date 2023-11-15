@@ -1,10 +1,11 @@
 import "./style.scss";
-import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
 export default function FavoritesCount() {
   return (
     <section className="favorites-count">
-      <BookmarkBorderOutlinedIcon color="primary"></BookmarkBorderOutlinedIcon>
+      <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon>
       <span>273</span>
     </section>
   );
