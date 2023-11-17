@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./routes/home";
+import Home, { loader as HomeLoader } from "./routes/home";
 import Details from "./routes/details";
 import Layout from "./routes/layout";
 import ErrorPage from "./error-page";
@@ -15,6 +15,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: HomeLoader,
       },
       {
         path: "/details",

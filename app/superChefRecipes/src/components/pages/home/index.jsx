@@ -1,27 +1,17 @@
 import "./style.scss";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import SearchHeader from "../../UI/organisms/search-header/index";
+import { useLoaderData } from "react-router-dom";
 import RecipeCardPopular from "../../UI/organisms/recipe-card-popular";
 import SearchByCategories from "../../UI/organisms/search-category";
 import RecipeCardFavoriteAndTimeCount from "../../UI/organisms/recipe-card-fav-time";
-import Footer from "../../UI/organisms/footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Home() {
-  axios.defaults.baseURL = "http://localhost:3000/"; //for test
-  const [favoriteRecipes, setFavoriteRecipes] = useState([]);
-  const [popularRecipes, setPopularRecipes] = useState([]);
-
-  useEffect(() => {
-    axios.get("/search").then((response) => {
-      setFavoriteRecipes(response.data.slice(0, 3));
-      setPopularRecipes(response.data.slice(4, 9));
-    });
-  }, []);
+  const { recipes } = useLoaderData();
+  const favoriteRecipes = recipes.slice(0, 3);
+  const popularRecipes = recipes.slice(4, 9);
 
   function handleSeggestionRecipes(value) {
     return (
