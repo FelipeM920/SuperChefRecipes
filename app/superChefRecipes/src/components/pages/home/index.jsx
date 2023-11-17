@@ -12,19 +12,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Home() {
-  axios.defaults.baseURL = "http://localhost:5000"; //just for local tests
+  axios.defaults.baseURL = "http://localhost:3000/"; //for test
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
   const [popularRecipes, setPopularRecipes] = useState([]);
 
   useEffect(() => {
     axios.get("/search").then((response) => {
-      console.log(response);
       setFavoriteRecipes(response.data.slice(0, 3));
       setPopularRecipes(response.data.slice(4, 9));
     });
   }, []);
 
-  function handleFavoriteRecipes(value) {
+  function handleSeggestionRecipes(value) {
     return (
       <SwiperSlide key={value.recipe.label}>
         <RecipeCardFavoriteAndTimeCount
@@ -49,7 +48,6 @@ export default function Home() {
 
   return (
     <section className="home">
-      <SearchHeader></SearchHeader>
       <div className="home-body">
         <div className="suggestions-slide">
           <span className="title">What i cook today?</span>
@@ -61,7 +59,7 @@ export default function Home() {
             loop={true}
           >
             {favoriteRecipes.length > 0 &&
-              favoriteRecipes.map((value) => handleFavoriteRecipes(value))}
+              favoriteRecipes.map((value) => handleSeggestionRecipes(value))}
           </Swiper>
         </div>
         <div className="popular-slide">
@@ -81,9 +79,6 @@ export default function Home() {
           <span className="title">Search By Categories</span>
           <SearchByCategories></SearchByCategories>
         </div>
-      </div>
-      <div className="footer-wrapper">
-        <Footer></Footer>
       </div>
     </section>
   );

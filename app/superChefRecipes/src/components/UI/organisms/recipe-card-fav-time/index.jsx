@@ -1,6 +1,7 @@
 import "./style.scss";
 import RecipeImageWithFavoritesAndTimeCount from "../../molecules/recipe-image-fav-time-count";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 RecipeCardFavoriteAndTimeCount.propTypes = {
   cardTitle: PropTypes.string.isRequired,
@@ -12,12 +13,15 @@ export default function RecipeCardFavoriteAndTimeCount(props) {
   const { cardTitle, timeToComplete, imageSource } = props;
 
   return (
-    <section className="recipe-card-fav-time">
-      <RecipeImageWithFavoritesAndTimeCount
-        timeToComplete={timeToComplete}
-        imageSource={imageSource}
-      ></RecipeImageWithFavoritesAndTimeCount>
-      <span className="card-title">{cardTitle}</span>
-    </section>
+    <Link to="/details">
+      <section className="recipe-card-fav-time">
+        <RecipeImageWithFavoritesAndTimeCount
+          timeToComplete={timeToComplete}
+          imageSource={imageSource}
+        ></RecipeImageWithFavoritesAndTimeCount>
+
+        <span className="card-title">{cardTitle}</span>
+      </section>
+    </Link>
   );
 }
