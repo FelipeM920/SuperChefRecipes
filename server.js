@@ -14,8 +14,8 @@ app.get('/search', async (req, res) => {
     params: {
       type: 'public',
       q: 'chicken',
-      app_id: 'ac06b95b',
-      app_key: '3a09d97f9dd5987e757c4f903204dd4f',
+      app_id: '',
+      app_key: '',
       count: '3'
     }
   })
