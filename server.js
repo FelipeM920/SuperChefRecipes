@@ -4,7 +4,7 @@ const app = express();
 const axios = require('axios');
 const port = 3000;
 
-const baseDir = `${__dirname}/dist`
+const baseDir = `${__dirname}/app/superChefRecipes/dist`
 app.use(express.static(`${baseDir}`))
 
 app.get('/', (req, res) => res.sendFile('index.html', { root: baseDir }))
