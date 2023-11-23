@@ -14,12 +14,26 @@ export default function Home() {
   const popularRecipes = recipes.slice(4, 9);
 
   function handleSeggestionRecipes(value) {
+    console.log(value);
     return (
       <SwiperSlide key={value.recipe.label}>
         <RecipeCardFavoriteAndTimeCount
           cardTitle={value.recipe.label}
           timeToComplete={value.recipe.totalTime}
           imageSource={value.recipe.image}
+          recipeDetails={{
+            image: value.recipe.image,
+            label: value.recipe.label,
+            yield: value.recipe.yield,
+            totalTime: value.recipe.totalTime,
+            calories: value.recipe.calories,
+            mealType: value.recipe.mealType,
+            cuisineType: value.recipe.cuisineType,
+            dietLabels: value.recipe.dietLabels,
+            digest: value.recipe.digest,
+            dishType: value.recipe.dishType,
+            ingredients: value.recipe.ingredients,
+          }}
         ></RecipeCardFavoriteAndTimeCount>
       </SwiperSlide>
     );

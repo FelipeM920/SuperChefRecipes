@@ -1,6 +1,13 @@
 import "./style.scss";
+import PropTypes from "prop-types";
 
-export default function Details() {
+Details.propTypes = {
+  recipeDetails: PropTypes.object.isRequired,
+};
+
+export default function Details(props) {
+  const { recipeDetails } = props;
+
   return (
     <section className="details">
       <h1>details</h1>

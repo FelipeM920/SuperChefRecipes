@@ -7,13 +7,14 @@ RecipeCardFavoriteAndTimeCount.propTypes = {
   cardTitle: PropTypes.string.isRequired,
   timeToComplete: PropTypes.number.isRequired,
   imageSource: PropTypes.string,
+  recipeDetails: PropTypes.object.isRequired,
 };
 
 export default function RecipeCardFavoriteAndTimeCount(props) {
-  const { cardTitle, timeToComplete, imageSource } = props;
+  const { cardTitle, timeToComplete, imageSource, recipeDetails } = props;
 
   return (
-    <Link to="/details">
+    <Link to="/details" state={{recipeDetails}}>
       <section className="recipe-card-fav-time">
         <RecipeImageWithFavoritesAndTimeCount
           timeToComplete={timeToComplete}
