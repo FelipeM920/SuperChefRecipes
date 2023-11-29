@@ -15,7 +15,7 @@ export default function Details(props) {
       <ImageHolder imageSource={recipeDetails.image} />
       <RecipeDetails
         duration={recipeDetails.totalTime}
-        serving={recipeDetails.yield}
+        serving={recipeDetails.yield.toString()}
         calories={Math.ceil(recipeDetails.calories)}
         views="80"
         title={recipeDetails.label}
