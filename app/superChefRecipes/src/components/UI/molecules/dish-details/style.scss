@@ -1,0 +1,23 @@
+.dish-details {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &-icons {
+      display: flex;
+      flex: 30%;
+      padding: 1%;
+      margin: 3%;
+    }
+  }
+}

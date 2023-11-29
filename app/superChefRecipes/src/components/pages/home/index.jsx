@@ -14,7 +14,6 @@ export default function Home() {
   const popularRecipes = recipes.slice(4, 9);
 
   function handleSeggestionRecipes(value) {
-    console.log(value);
     return (
       <SwiperSlide key={value.recipe.label}>
         <RecipeCardFavoriteAndTimeCount
