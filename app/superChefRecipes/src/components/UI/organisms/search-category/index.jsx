@@ -44,18 +44,6 @@ export default function SearchByCategories() {
       <div className="search-type-icon">
         <FontAwesomeIcon icon={faUtensils} />
       </div>
-      <div className="search-type-icon">
-        <FontAwesomeIcon icon={faDrumstickBite} />
-      </div>
-      <div className="search-type-icon">
-        <FontAwesomeIcon icon={faCookieBite} />
-      </div>
-      <div className="search-type-icon">
-        <FontAwesomeIcon icon={faMugHot} />
-      </div>
-      <div className="search-type-icon">
-        <FontAwesomeIcon icon={faIceCream} />
-      </div>
     </section>
   );
 }

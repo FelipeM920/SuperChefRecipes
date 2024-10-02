@@ -1,19 +1,19 @@
 .search-categories {
   display: flex;
   flex-wrap: wrap;
-  margin: 2% 0 15%;
+  justify-content: center;
+  margin: 2% 0 5%;
 
   .search-type-icon {
     display: flex;
-    flex: 10%;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
     background-color: white;
-    padding: 3%;
+    padding: 2%;
     margin: 1%;
     border-radius: 40%;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }

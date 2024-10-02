@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 export default function Home() {
   const { recipes } = useLoaderData();
-  const favoriteRecipes = recipes.slice(0, 3);
+  const favoriteRecipes = recipes.slice(0, 6);
   const popularRecipes = recipes.slice(4, 9);
 
   function handleSeggestionRecipes(value) {
@@ -57,7 +57,7 @@ export default function Home() {
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
-            slidesPerView={1.3}
+            slidesPerView={4.4}
             spaceBetween={20}
             loop={true}
           >
@@ -70,7 +70,7 @@ export default function Home() {
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
-            slidesPerView={2.3}
+            slidesPerView={3.2}
             spaceBetween={5}
             loop={true}
           >

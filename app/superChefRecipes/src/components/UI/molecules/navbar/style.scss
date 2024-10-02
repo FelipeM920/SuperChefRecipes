@@ -12,6 +12,9 @@
     width: 20%;
     height: auto;
     margin: 3%;
+    @media screen and (min-width: 1360px){
+      max-width: 8%;
+    }
   }
 
   .menuIcon {
