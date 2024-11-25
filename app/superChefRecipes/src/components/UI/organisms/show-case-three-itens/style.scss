@@ -1,0 +1,15 @@
+.showCaseThreeItens {
+  display: flex;
+  flex-direction: column;
+
+  .showCaseThreeItensBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .showCaseItem {
+    display: flex;
+    flex-direction: column;
+  }
+}

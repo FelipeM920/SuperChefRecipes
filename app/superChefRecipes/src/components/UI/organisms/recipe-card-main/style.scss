@@ -1,0 +1,26 @@
+@import "../../../../variables.scss";
+
+.mainBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  background-color: $pastel-blue;
+
+  .detailsImage {
+    display: flex;
+    flex: 1;
+    max-height: 600px;
+
+    .imageHolder {
+      width: 100%;
+    }
+  }
+
+  .detailsText {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+  }
+}

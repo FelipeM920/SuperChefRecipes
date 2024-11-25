@@ -1,48 +1,6 @@
 @import "../../../variables.scss";
 
-.suggestions-slide {
-  margin-bottom: 1.5rem;
-
-  .title {
-    font-family: $title-font;
-    font-size: 1.3rem;
-  }
-
-  .seggestion-swiper {
-    margin-top: 0.7rem;
-
-    --swiper-pagination-bottom: 0;
-  }
-}
-
-.popular-slide {
-  margin-bottom: 1.5rem;
-
-  .popular-title {
-    font-family: $title-font;
-    font-size: 1.3rem;
-  }
-
-  .recipe-card-popular {
-    width: 100%;
-    height: 28rem;
-    margin-bottom: 30%;
-  }
-}
-
-.search-categories-wrapper {
+.home {
   display: flex;
   flex-direction: column;
-
-  .title {
-    font-family: $title-font;
-    font-size: 1.3rem;
-  }
-}
-
-.home {}
-
-.home-body {
-  padding: 0 1rem;
-  background-color: $sand;
 }
