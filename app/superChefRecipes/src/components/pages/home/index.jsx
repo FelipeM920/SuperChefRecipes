@@ -9,6 +9,7 @@ export default function Home() {
     <section className="home">
       <RecipeCardMain recipe={recipes[2]} />
       <ShowCaseThreeItens title='Super Delicious' recipes={recipes.slice(0, 3)} />
+      <ShowCaseThreeItens title='Sweet Tooth' recipes={recipes.slice(4, 7)} />
     </section>
   );
 }

@@ -1,15 +1,41 @@
 .showCaseThreeItens {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 
   .showCaseThreeItensBox {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 40px;
   }
   
   .showCaseItem {
     display: flex;
     flex-direction: column;
+
+    .imageHolder {
+      width: 340px;
+      height: 280px;
+
+      img {
+        border-radius: 2%;
+      }
+    }
+
+    .starRating {
+      display: flex;
+      margin: 12px 0;
+    }
+
+    .recipeName {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
   }
 }
