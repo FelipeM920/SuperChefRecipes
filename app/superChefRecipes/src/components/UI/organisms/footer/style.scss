@@ -2,11 +2,57 @@
 
 .footer {
   display: flex;
-  justify-content: center;
-  background-color: $black;
+  flex-direction: column;
+  margin: 100px -20% 0 -20%;
+  background-color: #f9f9f9;
+  padding: 0 20%;
+
+  .footerContainer {
+    display: flex;
+    padding: 5% 0;
+  }
+
+  .logoContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-right: 50px;
+
+    .logoDescription {
+      font-size: 1rem;
+    }
+  }
+
+  .linkMenus {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
 
   .siteLogo {
-    width: 20%;
-    padding: 30px;
+    width: 35%;
+  }
+
+  li {
+    margin-top: 10px;
+  }
+
+  .socialMediaContainer {
+    display: flex;
+    padding: 5% 0;
+    border-top: 1px solid black;
+    justify-content: space-between;
+
+    .copyRightsText {
+      display: flex;
+      flex: 2;
+      font-size: 1rem;
+    }
+
+    .socialMediaIcons {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+    }
   }
 }
