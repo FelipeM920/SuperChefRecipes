@@ -4,6 +4,7 @@ import RecipeCardMain from "../../UI/organisms/recipe-card-main";
 import ShowCaseThreeItens from "../../UI/organisms/show-case-three-itens";
 import PopularCategories from "../../UI/organisms/popular-categories";
 import Newsletter from "../../UI/organisms/newsletter";
+import HandPickedCollection from "../../UI/organisms/hand-picked-collection";
 
 export default function Home() {
   const { recipes } = useLoaderData();
@@ -24,6 +25,7 @@ export default function Home() {
         buttonColor="#FF642F"
         onClick={() => alert("You have joined our newsletter")}
       />
+      <HandPickedCollection />
     </section>
   );
 }
